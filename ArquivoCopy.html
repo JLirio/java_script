@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP's do Sta</title>
+    <style>
+        /* Estilos CSS aqui */
+    </style>
+</head>
+
+<body>
+    <div class="img-logo">
+        <img src="./logo-sta.png" alt="" width="200px">
+    </div>
+    <ul class="headerTop">
+        <!-- Itens do cabeçalho aqui -->
+    </ul>
+    
+    <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+        <p id="test"></p>
+        <p></p>
+        <a id="ip"></a>
+        <br>
+    </div>
+
+    <script>
+        // Dados dos IPs aqui
+
+        let texto = "<ul>";
+        const ips = [/* arrays de IPs aqui */];
+        const name = [/* nomes de andares/sessões aqui */];
+
+        myFuncition(name);
+        texto += "</ul>";
+        document.getElementById("ip").innerHTML = texto;
+
+        function myFuncition(value) {
+            // Função que monta os cards aqui
+        }
+
+        function copiar(texto) {
+            var tempInput = document.createElement("input");
+            document.body.appendChild(tempInput);
+            tempInput.value = texto;
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+        }
+
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                content.style.display = content.style.display === "block" ? "none" : "block";
+            });
+        }
+    </script>
+
+</body>
+
+</html>
